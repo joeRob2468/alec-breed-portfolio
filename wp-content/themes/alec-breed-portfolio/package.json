@@ -1,0 +1,11 @@
+{
+  "name": "alec-breed-portfolio",
+  "version": "1.0.0",
+  "description": "A simple wordpress theme built on timber and foundation.",
+  "author": "John Boyer <joeRob2468@yahoo.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
+}

@@ -4,3 +4,4 @@
 wp/
 wp-content/vendor
 wp-content/plugins
+node_modules/

@@ -1,0 +1,38 @@
+{
+    "name": "boyerwebstudios/alec-breed-portfolio",
+    "description": "A simple portfolio theme built on Wordpress, Timber, and Foundation",
+    "type": "project",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "wecodemore/wpstarter": "~2.0",
+        "wpackagist-plugin/wp-super-cache": "*",
+        "wpackagist-plugin/timber-library": "^1.6",
+        "wpackagist-plugin/advanced-custom-fields": "^5.6"
+    },
+    "config": {
+        "vendor-dir": "wp-content/vendor"
+    },
+    "scripts": {
+        "post-install-cmd": "WCM\\WPStarter\\Setup::run",
+        "post-update-cmd": "WCM\\WPStarter\\Setup::run"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp",
+        "installer-paths": {
+            "wp-content/plugins/{$name}": [
+                "type:wordpress-plugin"
+            ],
+            "wp-content/mu-plugins/{$name}": [
+                "type:wordpress-muplugin"
+            ],
+            "wp-content/themes/{$name}": [
+                "type:wordpress-theme"
+            ]
+        }
+    }
+}

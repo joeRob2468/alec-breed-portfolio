@@ -5,6 +5,10 @@
   "author": "John Boyer <joeRob2468@yahoo.com>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "build": "./node_modules/.bin/webpack",
+    "watch": "./node_modules/.bin/webpack --watch"
+  },
   "devDependencies": {
     "webpack": "^3.10.0"
   }

@@ -41,8 +41,22 @@ module.exports = {
         use: [{
           loader: "css-loader",
           options: {
+            sourceMap: true,
+            importLoaders: 1,
+            autoprefixer: false
+          }
+        }, {
+          loader: "postcss-loader",
+          options: {
+            ident: 'postcss',
             minimize: true,
-            sourceMap: true
+            sourceMap: true,
+            plugins: (loader) => [
+              require('autoprefixer')(),
+              require('cssnano')({
+                preset: 'default'
+              })
+            ]
           }
         }, {
           loader: "sass-loader",

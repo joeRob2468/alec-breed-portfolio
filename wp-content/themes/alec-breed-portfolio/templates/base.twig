@@ -6,8 +6,9 @@
 	</head>
 {% endblock %}
 
-	<body class="{{body_class}}" data-template="base.twig">
-		<header class="header" >
+<body class="{{body_class}}" data-template="base.twig">
+	<div class="grid-container">
+		<header class="grid-x header" >
 			{% block header %}
 				<div class="wrapper">
 					<h1 class="hdr-logo" role="banner">
@@ -19,8 +20,10 @@
 				</div>
 			{% endblock %}
 		</header>
+	</div>
 
-		<section id="content" role="main" class="content-wrapper">
+	<div class="grid-container">
+		<section id="content" role="main" class="grid-x">
 			{% if title %}<h1>{{title}}</h1>{% endif %}
 			<div class="wrapper {{sidebar_class}}">
 				{% block content %}
@@ -33,12 +36,15 @@
 				</aside>
 			{% endif %}
 		</section>
+	</div>
 
+	<div class="grid-container">
 		{% block footer %}
-			<footer id="footer">
+			<footer id="footer" class="grid-x">
 				{% include 'footer.twig' %}
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}
-	</body>
+	</div>
+</body>
 </html>

@@ -6,7 +6,7 @@ if ( ! class_exists( 'Timber' ) ) {
 	});
 	
 	add_filter('template_include', function($template) {
-		return get_stylesheet_directory() . '/static/no-timber.html';
+		return get_stylesheet_directory() . '/no-timber.html';
 	});
 	
 	return;
@@ -25,7 +25,7 @@ class StarterSite extends TimberSite {
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'register_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'register_assets' ) );
 		parent::__construct();
 	}
 
@@ -37,9 +37,10 @@ class StarterSite extends TimberSite {
 		//this is where you can register custom taxonomies
 	}
 
-	function register_scripts() {
-		// this is where you can register custom scripts
-		wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/static/dist/bundle.js', array('jquery'), '1.0', true );
+	function register_assets() {
+		// this is where you can register custom assets
+		wp_enqueue_style( 'theme-styles', get_stylesheet_directory_uri() . '/dist/main.bundle.css' );
+		wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/dist/bundle.js', array('jquery'), '1.0', true );
 	}
 
 	function add_to_context( $context ) {

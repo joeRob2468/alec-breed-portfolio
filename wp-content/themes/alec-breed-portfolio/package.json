@@ -27,5 +27,7 @@
     "webpack": "^3.10.0",
     "webpack-bundle-analyzer": "^2.9.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "foundation-sites": "^6.4.4-rc1"
+  }
 }

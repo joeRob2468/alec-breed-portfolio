@@ -40,7 +40,7 @@ class StarterSite extends TimberSite {
 	function register_assets() {
 		// this is where you can register custom assets
 		wp_enqueue_style( 'theme-styles', get_stylesheet_directory_uri() . '/dist/main.bundle.css' );
-		wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/dist/bundle.js', array('jquery'), '1.0', true );
+		wp_enqueue_script( 'theme-scripts', get_stylesheet_directory_uri() . '/dist/bundle.js', null, '1.0', true );
 	}
 
 	function add_to_context( $context ) {

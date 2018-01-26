@@ -2,4 +2,4 @@
 require('./scripts/site.js');
 
 // Require styles
-require('./scss/site.scss');
+require('./scss/app.scss');

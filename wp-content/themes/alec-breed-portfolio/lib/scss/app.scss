@@ -1,5 +1,11 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:400,600');
+@import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+
+// Styles
 @import "~foundation-sites/scss/foundation";
 @import "foundation-settings";
+@import "util";
 @import "custom";
 
 @include foundation-global-styles;

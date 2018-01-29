@@ -1,5 +1,42 @@
 @import "~foundation-sites/scss/util/util";
 
+// Custom Variables
+$body-font: "Open Sans", "Segoe UI", Tahoma, sans-serif;
+$heading-font: "Poppins", "Arial Black", Verdana, sans-serif;
+$accent-color: #082296;
+
+// Foundation Settings
+
+$body-background: #F0F0F0;
+$body-font-color: #333333;
+$global-width: rem-calc(1400);
+
+$header-font-family: $heading-font;
+$header-margin-bottom: 1.5rem;
+$header-font-weight: 600;
+$header-lineheight: 1.2;
+
+$paragraph-margin-bottom: 1.5rem;
+
+$header-styles: (
+  small: (
+    'h1': ('font-size': 2em),
+    'h2': ('font-size': 1.741em),
+    'h3': ('font-size': 1.516em),
+    'h4': ('font-size': 1.32em),
+    'h5': ('font-size': 1.149em),
+    'h6': ('font-size': 1em),
+  ),
+  medium: (
+    'h1': ('font-size': 3.5em),
+    'h2': ('font-size': 2.724em),
+    'h3': ('font-size': 2.121em),
+    'h4': ('font-size': 1.651em),
+    'h5': ('font-size': 1.285em),
+    'h6': ('font-size': 1em),
+  ),
+);
+
 // //  Foundation for Sites Settings
 // //  -----------------------------
 // //

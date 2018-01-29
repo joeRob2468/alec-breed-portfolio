@@ -7,20 +7,20 @@
 {% endblock %}
 
 <body class="{{body_class}}" data-template="base.twig">
-	<div class="grid-container">
+	<section class="grid-container">
 		<header class="grid-x header" >
 			{% block header %}
-				<div class="wrapper">
-					<h1 class="hdr-logo" role="banner">
-						<a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
-					</h1>
-					<nav id="nav-main" class="nav-main" role="navigation">
-						{% include "menu.twig" with {'menu': menu.get_items} %}
-					</nav><!-- #nav -->
-				</div>
+			<div class="auto cell">
+				<a class="logo" href={{site.url}} rel="home">
+					{{site.name}}
+				</a>
+			</div>
+			<div class="auto cell align-right">
+				{% include "menu.twig" with {'menu': menu.get_items} %}
+			</div>
 			{% endblock %}
 		</header>
-	</div>
+	</section>
 
 	<div class="grid-container">
 		<section id="content" role="main" class="grid-x">

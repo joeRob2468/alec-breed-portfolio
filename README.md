@@ -12,6 +12,6 @@ To initialize Webpack, cd to the `wp-content/themes/alec-breed-portfolio` direct
 
 # Build Commands
 
-Webpack is configured to use BrowserSync when watching files, and it proxies the `WP_HOME` address configured in `.env. 
+Webpack is configured to use BrowserSync when watching files, and it proxies the address configured in the BrowserSyncPlugin initialization code in `webpack.config.js`, so be sure to set update that address to match your environment. 
 Use `yarn watch` to build files, watch for changes, and host the BrowserSync proxy. 
 use `yarn build` to build for production. 

@@ -11,9 +11,13 @@
 		<header class="grid-x header" >
 			{% block header %}
 			<div class="auto cell">
-				<a class="logo" href={{site.url}} rel="home">
-					{{site.name}}
-				</a>
+				{% if site.logo.src %}
+					<a class="logo" href={{ site.url }} rel="home">
+						<img src="{{ site.logo.src }}" alt="{{ site.name }}">
+					</a>
+				{% else %}
+					<a href={{ site.url }} rel="home">{{ site.name }}</a>
+				{% endif %}
 			</div>
 			<div class="auto cell align-right">
 				{% include "menu.twig" with {'menu': menu.get_items} %}

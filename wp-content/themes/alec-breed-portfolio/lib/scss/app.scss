@@ -6,7 +6,6 @@
 @import "~foundation-sites/scss/foundation";
 @import "foundation-settings";
 @import "util";
-@import "custom";
 
 @include foundation-global-styles;
 @include foundation-xy-grid-classes;
@@ -20,3 +19,5 @@
 @include foundation-media-object;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
+
+@import "custom";

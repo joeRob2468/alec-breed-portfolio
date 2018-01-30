@@ -8,7 +8,7 @@
 
 <body class="{{body_class}}" data-template="base.twig">
 	<section class="grid-container fluid">
-		<header class="grid-x header" >
+		<header class="grid-margin-x header" >
 			{% block header %}
 			<div class="auto cell">
 				{% if site.logo.src %}
@@ -19,9 +19,9 @@
 					<a href={{ site.url }} rel="home">{{ site.name }}</a>
 				{% endif %}
 			</div>
-			<div class="auto cell align-right">
+			<nav class="auto cell align-right">
 				{% include "menu.twig" with {'menu': header_menu.get_items} %}
-			</div>
+			</nav>
 			{% endblock %}
 		</header>
 	</section>

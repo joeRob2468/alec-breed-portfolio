@@ -1,0 +1,50 @@
+body {
+  background: #000000;
+}
+
+.header {
+  display: flex;
+  min-height: 6rem;
+  align-items: center;
+
+  .logo img {
+    height: 2rem;
+    width: auto;
+  }
+
+  nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+
+  nav li {
+    display: inline-block;
+    list-style-type: none;
+
+    a {
+      padding: 1em 0.7em 1em 0.7em;
+      line-height: 4em;
+      font-weight: 600;
+      color: $accent-color;
+
+      .icon {
+        font-size: 1.3em;
+      }
+    }
+
+    &.email_link a {
+      padding: 0;
+      padding-bottom: 0.15em;
+      margin: 1em 0.7em 1em 0.7em;
+      font-weight: normal;
+      border-bottom: 2.5px solid #c4cce2;
+      transition: all 0.2s;
+
+      &:hover {
+        padding-bottom: 0.1em;
+        border-bottom: 2.5px solid $accent-color;
+      }
+    }
+  }
+}

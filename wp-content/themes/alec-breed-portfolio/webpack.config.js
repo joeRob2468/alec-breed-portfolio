@@ -18,7 +18,7 @@ var browserSync = new BrowserSyncPlugin({
   proxy: {
     target: 'localhost/dev/alecbreed/code'
   },
-  files: ['**/*.twig', '**/*.php', '**/*.css', '**/*.js']
+  files: ['**/*.twig', '**/*.php', '**/*.scss', '**/*.css', '**/*.js']
 });
 
 module.exports = {

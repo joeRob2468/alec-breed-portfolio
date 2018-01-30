@@ -7,7 +7,7 @@
 {% endblock %}
 
 <body class="{{body_class}}" data-template="base.twig">
-	<section class="grid-container">
+	<section class="grid-container fluid">
 		<header class="grid-x header" >
 			{% block header %}
 			<div class="auto cell">
@@ -26,7 +26,7 @@
 		</header>
 	</section>
 
-	<div class="grid-container">
+	<div class="grid-container fluid">
 		<section id="content" role="main" class="grid-x">
 			{% if title %}<h1>{{title}}</h1>{% endif %}
 			<div class="wrapper {{sidebar_class}}">
@@ -42,7 +42,7 @@
 		</section>
 	</div>
 
-	<div class="grid-container">
+	<div class="grid-container fluid">
 		{% block footer %}
 			<footer id="footer" class="grid-x">
 				{% include 'footer.twig' %}

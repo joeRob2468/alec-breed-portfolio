@@ -1,11 +1,10 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Poppins:400,600');
+@import url('https://fonts.googleapis.com/css?family=Spectral:400,600,700');
 @import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
 
 // Styles
 @import "~foundation-sites/scss/foundation";
 @import "foundation-settings";
-@import "util";
 
 @include foundation-global-styles;
 @include foundation-xy-grid-classes;
@@ -20,4 +19,5 @@
 @include foundation-visibility-classes;
 @include foundation-float-classes;
 
+@import "util";
 @import "custom";

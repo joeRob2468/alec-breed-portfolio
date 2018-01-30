@@ -1,8 +1,8 @@
 @import "~foundation-sites/scss/util/util";
 
 // Custom Variables
-$body-font: "Open Sans", "Segoe UI", Tahoma, sans-serif;
-$heading-font: "Poppins", "Arial Black", Verdana, sans-serif;
+$body-font: "Spectral", "Segoe UI", Tahoma, sans-serif;
+$heading-font: "Spectral", "Segoe UI", Tahoma, sans-serif;
 $accent-color: #082296;
 
 // Foundation Settings
@@ -12,6 +12,7 @@ $body-font-color: #333333;
 $global-width: rem-calc(1400);
 
 $header-font-family: $heading-font;
+$body-font-family: $body-font;
 $header-margin-bottom: 1.5rem;
 $header-font-weight: 600;
 $header-lineheight: 1.2;

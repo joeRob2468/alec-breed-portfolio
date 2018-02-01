@@ -68,3 +68,40 @@ nav li {
     }
   }
 }
+
+.page-container {
+  background: #FFFFFF;
+}
+
+.portfolio-container {
+  background: #FFFFFF;
+  margin-top: 8rem;
+
+  @include breakpoint(small down) {
+    margin-top: 0rem;
+  }
+}
+
+.portfolio-grid .portfolio-item {
+  margin-bottom: 6rem;
+  position: relative;
+  box-shadow: 0px 44px 87px 0px rgba(#27346f, 0.39);
+
+  @include breakpoint(medium up) {
+    &:nth-child(even) {
+      top: -2rem;
+    }
+
+    &:nth-child(odd) {
+      top: -5rem;
+    }
+  }
+
+  @include breakpoint(small down) {
+    margin-bottom: 2rem;
+  }
+}
+
+footer {
+  padding-bottom: 1rem;
+}

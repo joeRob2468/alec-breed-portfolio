@@ -33,7 +33,7 @@
 		</header>
 	</section>
 
-	<div class="page-container">
+	<div class="portfolio-container">
 		<section class="grid-container">
 			<div class="grid-x grid-padded-x small-up-1 medium-up-2 portfolio-grid">
 				<div class="cell portfolio-item"><img class="cover" src="{{ theme.link }}/lib/images/placeholder.png"></div>
@@ -46,30 +46,15 @@
 		</section>
 	</div>
 
-	{# <section class="grid-container fluid">
-		<div id="content" role="main" class="grid-x">
-			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
-				{% block content %}
-					Sorry, no content
-				{% endblock %}
-			</div>
-			{% if sidebar %}
-				<aside class="layout-sidebar">
-					{{sidebar}}
-				</aside>
-			{% endif %}
-		</div>
-	</section>
-
-	<div class="grid-container fluid">
-		{% block footer %}
-			<footer id="footer" class="grid-x">
-				{% include 'footer.twig' %}
-			</footer>
-			
-		{% endblock %}
-	</div> #}
+	<div class="page-container">
+		<section class="grid-container">
+			{% block footer %}
+				<footer class="grid-margin-x">
+					{% include 'footer.twig' %}
+				</footer>
+			{% endblock %}
+		</section>
+	</div>
 
 	{{ function('wp_footer') }}
 </body>

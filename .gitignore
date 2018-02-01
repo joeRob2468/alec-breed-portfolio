@@ -3,6 +3,8 @@
 /wp-config.php
 wp/
 wp-content/vendor
-wp-content/plugins
+wp-content/plugins/*
 wp-content/uploads
 node_modules/
+
+!wp-content/plugins/alec-breed-cpt

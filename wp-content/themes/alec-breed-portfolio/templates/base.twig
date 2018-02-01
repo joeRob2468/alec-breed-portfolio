@@ -37,7 +37,14 @@
 		<section class="grid-container">
 			<div class="grid-x grid-padded-x small-up-1 medium-up-2 portfolio-grid">
 				{% for i in 1..6 %}
-					<div class="cell portfolio-item"><img class="cover" src="{{ theme.link }}/lib/images/placeholder{% if i is odd %}-odd{% endif %}.png"></div>
+					<div class="cell portfolio-item">
+						<a href="#">
+							<img class="cover" src="{{ theme.link }}/lib/images/placeholder{% if i is odd %}-odd{% endif %}.png">
+							<div class="hover-overlay">
+								<p>Portfolio {{ i }}</p>
+							</div>
+						</a>
+					</div>
 				{% endfor %}
 			</div>
 		</section>

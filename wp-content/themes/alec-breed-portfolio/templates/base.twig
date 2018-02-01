@@ -36,12 +36,9 @@
 	<div class="portfolio-container">
 		<section class="grid-container">
 			<div class="grid-x grid-padded-x small-up-1 medium-up-2 portfolio-grid">
-				<div class="cell portfolio-item"><img class="cover" src="{{ theme.link }}/lib/images/placeholder.png"></div>
-				<div class="cell portfolio-item"><img class="cover" src="{{ theme.link }}/lib/images/placeholder-odd.png"></div>
-				<div class="cell portfolio-item"><img class="cover" src="{{ theme.link }}/lib/images/placeholder.png"></div>
-				<div class="cell portfolio-item"><img class="cover" src="{{ theme.link }}/lib/images/placeholder-odd.png"></div>
-				<div class="cell portfolio-item"><img class="cover" src="{{ theme.link }}/lib/images/placeholder.png"></div>
-				<div class="cell portfolio-item"><img class="cover" src="{{ theme.link }}/lib/images/placeholder-odd.png"></div>
+				{% for i in 1..6 %}
+					<div class="cell portfolio-item"><img class="cover" src="{{ theme.link }}/lib/images/placeholder{% if i is odd %}-odd{% endif %}.png"></div>
+				{% endfor %}
 			</div>
 		</section>
 	</div>

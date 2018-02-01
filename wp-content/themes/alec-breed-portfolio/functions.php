@@ -37,8 +37,8 @@ class StarterSite extends TimberSite {
 
 	function register_nav_menus() {
 		// this is where you can register custom menus
-		register_nav_menu('header-menu', __('Header Menu'));
-		register_nav_menu('footer-menu', __('Footer Menu'));
+		register_nav_menu('header_menu', __('Header Menu'));
+		register_nav_menu('footer_menu', __('Footer Menu'));
 	}
 
 	function register_taxonomies() {
@@ -55,8 +55,8 @@ class StarterSite extends TimberSite {
 		$context['foo'] = 'bar';
 		$context['stuff'] = 'I am a value set in your functions.php file';
 		$context['notes'] = 'These values are available everytime you call Timber::get_context();';
-		$context['header_menu'] = new TimberMenu('header-menu');
-		$context['footer_menu'] = new TimberMenu('footer-menu');
+		$context['header_menu'] = new TimberMenu('header_menu');
+		$context['footer_menu'] = new TimberMenu('footer_menu');
 		$context['site'] = $this;
 
 		$this->logo = new Timber\Image(get_theme_mod('custom_logo'));

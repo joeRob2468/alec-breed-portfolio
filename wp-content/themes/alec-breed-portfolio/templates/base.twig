@@ -26,29 +26,15 @@
 		</nav>
 	</section>
 
-	<section class="grid-container">
-		<header class="grid-margin-x padded huge text-center">
-			<h1>Alec Breed, off brand <span class="underline">Austin Breed</span>.</h1>
-			<p class="sub-heading">They're both designers, but he's got a bigger beard and is less DC-based.</p>
-		</header>
-	</section>
-
-	<div class="portfolio-container">
-		<section class="grid-container">
-			<div class="grid-x grid-padded-x small-up-1 medium-up-2 portfolio-grid">
-				{% for i in 1..6 %}
-					<div class="cell portfolio-item">
-						<a href="#">
-							<img class="cover" src="{{ theme.link }}/lib/images/placeholder{% if i is odd %}-odd{% endif %}.png">
-							<div class="hover-overlay">
-								<p>Portfolio {{ i }}</p>
-							</div>
-						</a>
-					</div>
-				{% endfor %}
-			</div>
-		</section>
-	</div>
+	{% block before_content %}
+		<div class="grid-container">
+	{% endblock %}
+	{% block content %}
+		Sorry, no content.
+	{% endblock %}
+	{% block after_content %}
+		</div>
+	{% endblock %}
 
 	<div class="page-container">
 		<section class="grid-container">

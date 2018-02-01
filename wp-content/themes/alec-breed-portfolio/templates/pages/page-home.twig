@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block before_content %}{% endblock %}
+{% block content %}
+<section class="grid-container">
+  <header class="grid-margin-x padded huge text-center">
+    <h1>{{ page.get_field('heading') }}</h1>
+    <p class="sub-heading">{{ page.get_field('subheading') }}</p>
+  </header>
+</section>
+
+<div class="portfolio-container">
+  <section class="grid-container">
+    <div class="grid-x grid-padded-x small-up-1 medium-up-2 portfolio-grid">
+      {% for item in portfolio_items %}
+        <div class="cell portfolio-item">
+          <a href="{{ item.link }}">
+            <img class="cover" src="{{ TimberImage(item.get_field('featured_image')).src }}">
+            <div class="hover-overlay">
+              <p>{{ item.title }}</p>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+{% endblock %}
+{% block after_content %}{% endblock %}

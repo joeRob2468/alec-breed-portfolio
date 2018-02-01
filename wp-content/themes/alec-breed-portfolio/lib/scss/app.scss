@@ -3,8 +3,8 @@
 @import url('http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
 
 // Styles
-@import "~foundation-sites/scss/foundation";
 @import "foundation-settings";
+@import "~foundation-sites/scss/foundation";
 
 @include foundation-global-styles;
 @include foundation-xy-grid-classes;

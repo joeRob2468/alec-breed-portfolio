@@ -7,7 +7,7 @@
 {% endblock %}
 
 <body class="{{body_class}}" data-template="base.twig">
-	<section class="grid-container fluid">
+	<section class="grid-container">
 		<nav class="grid-margin-x main-nav" >
 			{% block header %}
 			<div class="auto cell">
@@ -26,12 +26,25 @@
 		</nav>
 	</section>
 
-	<section class="grid-container fluid">
+	<section class="grid-container">
 		<header class="grid-margin-x padded huge text-center">
 			<h1>Alec Breed, off brand <span class="underline">Austin Breed</span>.</h1>
 			<p class="sub-heading">They're both designers, but he's got a bigger beard and is less DC-based.</p>
 		</header>
 	</section>
+
+	<div class="page-container">
+		<section class="grid-container">
+			<div class="grid-x grid-padded-x small-up-1 medium-up-2 portfolio-grid">
+				<div class="cell portfolio-item"><img class="cover" src="{{ theme.link }}/lib/images/placeholder.png"></div>
+				<div class="cell portfolio-item"><img class="cover" src="{{ theme.link }}/lib/images/placeholder-odd.png"></div>
+				<div class="cell portfolio-item"><img class="cover" src="{{ theme.link }}/lib/images/placeholder.png"></div>
+				<div class="cell portfolio-item"><img class="cover" src="{{ theme.link }}/lib/images/placeholder-odd.png"></div>
+				<div class="cell portfolio-item"><img class="cover" src="{{ theme.link }}/lib/images/placeholder.png"></div>
+				<div class="cell portfolio-item"><img class="cover" src="{{ theme.link }}/lib/images/placeholder-odd.png"></div>
+			</div>
+		</section>
+	</div>
 
 	{# <section class="grid-container fluid">
 		<div id="content" role="main" class="grid-x">

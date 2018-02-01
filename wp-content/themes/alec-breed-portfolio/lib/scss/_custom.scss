@@ -51,7 +51,7 @@ nav li {
 
     position: relative;
 
-    &::before {
+    &::before { 
       content: "";
       position: absolute;
       background: #c4cce2;

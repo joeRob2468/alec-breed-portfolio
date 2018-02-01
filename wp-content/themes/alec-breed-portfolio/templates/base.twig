@@ -1,6 +1,6 @@
 {% block html_head_container %}
 
-{% include 'html-header.twig' %}
+{% include 'partials/html-header.twig' %}
 	{% block head %}
 	{% endblock %}
 	</head>
@@ -20,7 +20,7 @@
 				{% endif %}
 			</div>
 			<div class="auto cell align-right">
-				{% include "menu.twig" with {'menu': header_menu.get_items} %}
+				{% include "partials/menu.twig" with {'menu': header_menu.get_items} %}
 			</div>
 			{% endblock %}
 		</nav>
@@ -40,7 +40,7 @@
 		<section class="grid-container">
 			{% block footer %}
 				<footer class="grid-margin-x">
-					{% include 'footer.twig' %}
+					{% include 'partials/footer.twig' %}
 				</footer>
 			{% endblock %}
 		</section>

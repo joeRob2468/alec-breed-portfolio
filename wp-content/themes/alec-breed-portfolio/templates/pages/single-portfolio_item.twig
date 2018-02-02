@@ -18,7 +18,7 @@
   <div class="grid-margin-x">
     <div class="cell">
       {% for image in post.get_field('image_gallery') %}
-        <img class="cover" src="{{ TimberImage(image).src }}" />
+        <img class="cover" src="{{ TimberImage(image).src|resize(800) }}" />
       {% endfor %}
     </div>
   </div>

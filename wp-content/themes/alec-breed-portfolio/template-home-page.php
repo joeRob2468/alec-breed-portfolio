@@ -9,7 +9,7 @@ $args = array(
 // Get post type project
 'post_type' => 'portfolio_item',
 // Get 6 posts (all is -1)
-'posts_per_page' => 6,
+'posts_per_page' => 12,
 // Get post by "graphic" category
 // 'meta_query' => array(
 //     array(

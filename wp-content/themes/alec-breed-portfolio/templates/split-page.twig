@@ -1,0 +1,63 @@
+{% block html_head_container %}
+
+{% include 'partials/html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+<body class="{{body_class}}" data-template="base.twig">
+	<div class="page-container container-left">
+		<section class="grid-container marginless">
+			<nav class="grid-margin-x main-nav">
+				{% block header %}
+				<div class="auto cell">
+					{% if site.logo.src %}
+						<a class="logo" href={{ site.url }} rel="home">
+							<img src="{{ site.logo.src }}" alt="{{ site.name }}">
+						</a>
+					{% else %}
+						<a href={{ site.url }} rel="home">{{ site.name }}</a>
+					{% endif %}
+				</div>
+				<div class="auto cell align-right hide">
+					{% include "partials/menu.twig" with {'menu': header_menu.get_items} %}
+				</div>
+				{% endblock %}
+			</nav>
+		</section>
+
+		{% block before_left_content %}
+		<section class="grid-container marginless">
+		{% endblock %}
+		{% block left_content %}
+			Sorry, no content.
+		{% endblock %}
+		{% block after_left_content %}
+			</section>
+		{% endblock %}
+
+		<section class="grid-container marginless">
+			{% block footer %}
+				<footer class="grid-margin-x">
+					{% include 'partials/footer.twig' %}
+				</footer>
+			{% endblock %}
+		</section>
+	</div>
+
+	<div class="page-container container-right">
+		{% block before_right_content %}
+		<div class="grid-container full">
+		{% endblock %}
+		{% block right_content %}
+			Sorry, no content.
+		{% endblock %}
+		{% block after_right_content %}
+		</div>
+		{% endblock %}
+	</div>
+
+	{{ function('wp_footer') }}
+</body>
+</html>

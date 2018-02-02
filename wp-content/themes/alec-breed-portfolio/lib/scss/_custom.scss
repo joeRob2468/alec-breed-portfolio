@@ -1,5 +1,9 @@
 /* Typograpy and Util Styles */
 
+body {
+  overflow-x: hidden;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: $accent-color;
 }
@@ -71,6 +75,29 @@ nav li {
 
 .page-container {
   background: #FFFFFF;
+
+  &.container-left {
+    @include breakpoint(large up) {
+      width: 50%;
+      position: fixed;
+      height: 100%;
+      float: left;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      padding-left: 10%;
+      padding-right: 10%;
+
+      overflow-y: auto;
+    }
+  }
+
+  &.container-right {
+    @include breakpoint(large up) {
+      width: 50%;
+      float: right;
+    }
+  }
 }
 
 .portfolio-container {

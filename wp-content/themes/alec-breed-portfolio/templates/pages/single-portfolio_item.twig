@@ -1,5 +1,29 @@
-{% extends "base.twig" %}
+{% extends "split-page.twig" %}
 
-{% block content %}
-  {{ post.title }}
+{% block left_content %}
+  <article class="grid-margin-x">
+    <div class="cell padded">
+      <h1>{{ post.title }}</h1>
+      <hr class="underline" />
+      <p>{{ post.content }}</p>
+    </div>
+  </article>
+{% endblock %}
+
+{% block before_right_content %}
+  <div class="grid-container full">
+{% endblock %}
+
+{% block right_content %}
+  <div class="grid-margin-x">
+    <div class="cell">
+      {% for image in post.get_field('image_gallery') %}
+        <img class="cover" src="{{ TimberImage(image).src }}" />
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block after_right_content %}
+  </div>
 {% endblock %}

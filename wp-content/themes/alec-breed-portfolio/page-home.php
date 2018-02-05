@@ -24,8 +24,9 @@ $args = array(
   ),
   'paged' => 1
 );
-
+query_posts($args); // required to use pagination
 $context['portfolio_items'] = Timber::get_posts($args);
+$context['pagination'] = Timber::get_pagination();
 $context['post'] = new TimberPost();
 
 Timber::render( array(

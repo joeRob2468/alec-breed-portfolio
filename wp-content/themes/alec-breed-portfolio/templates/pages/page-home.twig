@@ -15,11 +15,13 @@
         {% include "partials/portfolio-item.twig" with {'item': item} %}
       {% endfor %}
     </div>
-    <div class="grid-x grid-padded-x">
-      <div class="auto cell align-center">
-        <a href="#" class="button-load-more" data-page="2" data-limit="{{ portfolio_items|length }}">Load More<br><i class="icon ion-ios-arrow-down"></i></a>
+    {% if pagination.total > 1 %}
+      <div class="grid-x grid-padded-x">
+        <div class="auto cell align-center">
+          <a href="#" class="button-load-more" data-page="2" data-limit="{{ portfolio_items|length }}">Load More<br><i class="icon ion-ios-arrow-down"></i></a>
+        </div>
       </div>
-    </div>
+    {% endif %}
   </section>
 </div>
 {% endblock %}

@@ -125,6 +125,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_script_loader_what_input_dist_what_input_min_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_script_loader_what_input_dist_what_input_min_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_script_loader_foundation_sites_dist_js_foundation_min_js__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_script_loader_foundation_sites_dist_js_foundation_min_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_script_loader_foundation_sites_dist_js_foundation_min_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__portfolio_ajax_controller_js__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__portfolio_ajax_controller_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__portfolio_ajax_controller_js__);
+
+
 
 
 
@@ -174,6 +178,53 @@ module.exports = "!function(t){function e(n){if(i[n])return i[n].exports;var s=i
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+$(document).ready(() => {
+  if ($('.portfolio-container .button-load-more').length > 0) {
+    $('.portfolio-container .button-load-more').on('click', onLoadButtonClick)
+  }
+
+  function onLoadButtonClick(e) {
+    e.preventDefault();
+    var button = $(this);
+
+    var page = button.data('page');
+    var limit = button.data('limit');
+
+    var params = {
+      limit: limit,
+      page: page,
+      action: 'get_portfolio_items'
+    }
+
+    $.ajax({
+      type: 'POST',
+      url: locals.ajaxurl,
+      data: params,
+      success: (res) => {
+        let itemContainer = $('.portfolio-container .portfolio-grid');
+        for (let item of res.items) {
+          itemContainer.append(item.data);
+        }
+
+        // if this wasn't our last page, increment the page variable on the button. 
+        if (res.totalPages > page) {
+          button.data('page', page + 1);
+        } else {
+          button.off('click', onLoadButtonClick);
+          button.fadeOut();
+        }
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
+  }
+});
 
 /***/ })
 /******/ ]);

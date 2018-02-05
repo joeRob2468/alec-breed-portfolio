@@ -107,6 +107,23 @@ nav li {
   @include breakpoint(small down) {
     margin-top: 0rem;
   }
+
+  .button-load-more {
+    margin: 0px auto;
+    text-align: center;
+    color: $accent-color;
+    font-weight: 600;
+
+    .icon {
+      position: relative;
+      top: -0.4rem;
+      transition: all 0.2s;
+    }
+
+    &:hover .icon {
+      top: 0;
+    }
+  }
 }
 
 .portfolio-grid .portfolio-item {

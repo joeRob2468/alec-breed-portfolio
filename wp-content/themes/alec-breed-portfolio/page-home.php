@@ -6,22 +6,24 @@
 
 $context = Timber::get_context();
 $args = array(
-// Get post type project
-'post_type' => 'portfolio_item',
-// Get 6 posts (all is -1)
-'posts_per_page' => 12,
-// Get post by "graphic" category
-// 'meta_query' => array(
-//     array(
-//         'key' => 'project_category',
-//         'value' => 'graphic',
-//         'compare' => 'LIKE'
-//     )
-// ),
-// Order by post date
-'orderby' => array(
-    'date' => 'DESC'
-));
+  // Get post type project
+  'post_type' => 'portfolio_item',
+  // Get 6 posts (all is -1)
+  'posts_per_page' => 6,
+  // Get post by "graphic" category
+  // 'meta_query' => array(
+  //     array(
+  //         'key' => 'project_category',
+  //         'value' => 'graphic',
+  //         'compare' => 'LIKE'
+  //     )
+  // ),
+  // Order by post date
+  'orderby' => array(
+      'date' => 'DESC'
+  ),
+  'paged' => 1
+);
 
 $context['portfolio_items'] = Timber::get_posts($args);
 $context['post'] = new TimberPost();

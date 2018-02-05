@@ -8,20 +8,17 @@
     <p class="sub-heading">{{ post.get_field('subheading') }}</p>
   </header>
 </section>
-
 <div class="portfolio-container">
   <section class="grid-container">
     <div class="grid-x grid-padded-x small-up-1 medium-up-2 portfolio-grid">
       {% for item in portfolio_items %}
-        <div class="cell portfolio-item">
-          <a href="{{ item.link }}">
-            <img class="cover" src="{{ TimberImage(item.get_field('featured_image')).src }}">
-            <div class="hover-overlay">
-              <p>{{ item.title }}</p>
-            </div>
-          </a>
-        </div>
+        {% include "partials/portfolio-item.twig" with {'item': item} %}
       {% endfor %}
+    </div>
+    <div class="grid-x grid-padded-x">
+      <div class="auto cell align-center">
+        <a href="#" class="button-load-more" data-page="2" data-limit="{{ portfolio_items|length }}">Load More<br><i class="icon ion-ios-arrow-down"></i></a>
+      </div>
     </div>
   </section>
 </div>

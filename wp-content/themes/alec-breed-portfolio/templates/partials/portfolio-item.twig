@@ -1,0 +1,8 @@
+<div class="cell portfolio-item">
+  <a href="{{ item.link }}">
+    <img class="cover" src="{{ TimberImage(item.get_field('featured_image')).src }}">
+    <div class="hover-overlay">
+      <p>{{ item.title }}</p>
+    </div>
+  </a>
+</div>

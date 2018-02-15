@@ -1,6 +1,6 @@
-# Wordpress, Webpack, and Timber starter. 
+# Alec Breed's Portfolio 
 
-This is a simple, bare-bones wordpress and webpack build system based on the Timber starter theme.
+A simple portfolio theme built on Timber and Foundation.
 
 # Configuration and Installation
 
